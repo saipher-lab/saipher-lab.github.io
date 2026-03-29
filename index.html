@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>SAIPHER</title>
+  <title>Saipher</title>
 
   <!-- Fonte -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
@@ -37,12 +37,30 @@
 
     h1 {
       font-size: 3rem;
-      text-shadow: 0 0 20px #00f0ff;
+      text-shadow: 0 0 20px #a020f0; /* ROXO */
     }
 
-    p {
+    .name-link {
+      display: block;
+      margin-top: 10px;
+      font-size: 1.2rem;
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .name-link:hover {
+      color: #a020f0;
+      text-shadow: 0 0 10px #a020f0;
+    }
+
+    .subtitle {
       opacity: 0.7;
-      margin-bottom: 20px;
+      margin-top: 5px;
+    }
+
+    .icons {
+      margin-top: 20px;
     }
 
     .icons a {
@@ -53,8 +71,8 @@
     }
 
     .icons a:hover {
-      color: #00f0ff;
-      text-shadow: 0 0 10px #00f0ff;
+      color: #a020f0;
+      text-shadow: 0 0 10px #a020f0;
     }
   </style>
 </head>
@@ -65,8 +83,16 @@
 
 <div class="content">
   <h1>Saipher</h1>
-  <p>Jeniffer Pott — Cybersecurity Student</p>
 
+  <!-- Nome clicável -->
+  <a class="name-link" href="https://saipher-lab.github.io/jenifferpott">
+    Jeniffer Pott
+  </a>
+
+  <!-- Cybersecurity -->
+  <p class="subtitle">cybersecurity</p>
+
+  <!-- Ícones -->
   <div class="icons">
     <a href="#"><i class="fab fa-github"></i></a>
     <a href="#"><i class="fab fa-linkedin"></i></a>
