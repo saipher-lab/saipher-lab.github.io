@@ -82,17 +82,35 @@
     .back-btn {
       margin-top: 20px;
       padding: 10px 20px;
-      background: #8A2BE2FF; /* ROXO */
+      background: #301934; /* ROXO ESCURO */
       color: white;
       border: none;
       cursor: pointer;
       font-size: 1rem;
+      text-shadow: 0 0 5px #8A2BE2FF; /* ROXO */
+      animation: pulse 2s infinite; /* Animação contínua */
       transition: 0.3s;
     }
 
     .back-btn:hover {
-      background: #8b00c5;
+      background: #8A2BE2FF; /* ROXO */
+      text-shadow: 0 0 25px #8A2BE2FF; /* ROXO - Brilho intenso no hover */
     }
+
+    /* Animação pulsante */
+    @keyframes pulse {
+      0% {
+        text-shadow: 0 0 5px #8A2BE2FF; /* ROXO */
+        box-shadow: 0 0 5px #8A2BE2FF; /* ROXO */
+      }
+      50% {
+        text-shadow: 0 0 15px #8A2BE2FF; /* ROXO */
+        box-shadow: 0 0 15px #8A2BE2FF; /* ROXO */
+      }
+      100% {
+        text-shadow: 0 0 5px #8A2BE2FF; /* ROXO */
+        box-shadow: 0 0 5px #8A2BE2FF; /* ROXO */
+      }
 
     /* Escondendo a tela de repo por padrão */
     .repo {
@@ -125,9 +143,9 @@
 
 <!-- Tela do Repositório -->
 <div class="repo" id="repoPage">
-  <h1>Repositório: Jeniffer Pott</h1>
-  <p>Aqui você pode colocar informações do seu repositório ou links para os projetos.</p>
-  <button class="back-btn" id="backHome">Voltar para a tela inicial</button>
+  <h1>Jeniffer Pott</h1>
+  <p>Projects are coming soon.</p>
+  <button class="back-btn" id="backHome">Return to home screen</button>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
