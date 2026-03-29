@@ -6,11 +6,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-<!-- Favicon -->
-<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
   
   <style>
     body {
@@ -32,7 +32,7 @@
       z-index: 0;
     }
 
-    .content, .repo {
+    .content {
       text-align: center;
       z-index: 1;
     }
@@ -42,6 +42,7 @@
       text-shadow: 0 0 20px #8A2BE2FF; /* ROXO */
     }
 
+    /* Nome clicável com efeito roxo */
     .name-link {
       display: block;
       margin-top: 10px;
@@ -53,8 +54,15 @@
     }
 
     .name-link:hover {
-      color: #8A2BE2FF; /* ROXO */
-      text-shadow: 0 0 10px #8A2BE2FF; /* ROXO */
+      color: #8A2BE2FF;
+      text-shadow: 0 0 10px #8A2BE2FF;
+      animation: pulse-name 2s infinite;
+    }
+
+    @keyframes pulse-name {
+      0% { text-shadow: 0 0 5px #8A2BE2FF; }
+      50% { text-shadow: 0 0 20px #8A2BE2FF; }
+      100% { text-shadow: 0 0 5px #8A2BE2FF; }
     }
 
     .subtitle {
@@ -74,49 +82,9 @@
     }
 
     .icons a:hover {
-      color: #8A2BE2FF; /* ROXO */
-      text-shadow: 0 0 10px #8A2BE2FF; /* ROXO */
+      color: #8A2BE2FF;
+      text-shadow: 0 0 10px #8A2BE2FF;
     }
-
-    /* Botão voltar */
-    .back-btn {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: #301934; /* ROXO ESCURO */
-      color: white;
-      border: none;
-      cursor: pointer;
-      font-size: 1rem;
-      text-shadow: 0 0 5px #8A2BE2FF; /* ROXO */
-      animation: pulse 2s infinite; /* Animação contínua */
-      transition: 0.3s;
-    }
-
-    .back-btn:hover {
-      background: #522081; /* ROXO */
-      text-shadow: 0 0 25px #8A2BE2FF; /* ROXO - Brilho intenso no hover */
-    }
-
-    /* Animação pulsante */
-    @keyframes pulse {
-      0% {
-        text-shadow: 0 0 5px #8A2BE2FF; /* ROXO */
-        box-shadow: 0 0 5px #8A2BE2FF; /* ROXO */
-      }
-      50% {
-        text-shadow: 0 0 15px #8A2BE2FF; /* ROXO */
-        box-shadow: 0 0 15px #8A2BE2FF; /* ROXO */
-      }
-      100% {
-        text-shadow: 0 0 5px #8A2BE2FF; /* ROXO */
-        box-shadow: 0 0 5px #8A2BE2FF; /* ROXO */
-      }
-
-    /* Escondendo a tela de repo por padrão */
-    .repo {
-      display: none;
-    }
-
   </style>
 </head>
 
@@ -128,10 +96,10 @@
 <div class="content" id="home">
   <h1>SAIPHER</h1>
 
-  <!-- Nome clicável abre na mesma página -->
+  <!-- Nome clicável abre o repositório -->
   <a class="name-link" href="https://saipher-lab.github.io/jenifferpott">
-  Jeniffer Pott
-</a>
+    Jeniffer Pott
+  </a>
 
   <p class="subtitle">cybersecurity</p>
 
@@ -143,13 +111,6 @@
   </div>
 </div>
 
-<!-- Tela do Repositório -->
-<div class="repo" id="repoPage">
-  <h1>Jeniffer Pott</h1>
-  <p>Projects are coming soon.</p>
-  <button class="back-btn" id="backHome">Return to home screen</button>
-</div>
-
 <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 <script>
 particlesJS("particles-js", {
@@ -159,18 +120,6 @@ particlesJS("particles-js", {
     move: { speed: 1 },
     line_linked: { enable: true }
   }
-});
-
-// Abrir tela do repositório
-document.getElementById('openRepo').addEventListener('click', function() {
-  document.getElementById('home').style.display = 'none';
-  document.getElementById('repoPage').style.display = 'block';
-});
-
-// Voltar para tela inicial
-document.getElementById('backHome').addEventListener('click', function() {
-  document.getElementById('repoPage').style.display = 'none';
-  document.getElementById('home').style.display = 'block';
 });
 </script>
 
